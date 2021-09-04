@@ -15,9 +15,19 @@ inventory = {
 for item in inventory:
     # decrement item by using an assignment operator (Day 2 Lecture line #130)
 
+for i in inv.keys():
+    inv[i] -= 1
+    
+print(inv)
     # NOTE: recall that item represents the key of the key:value pair
 
 # SCENARIO: REMOVE ANY 0 ITEMS
 
 for item in inventory:
     # use an if statement to check if the value is 0 and then remove it
+
+for key, value in inv.items():
+    if value is None:
+        del inv[key]
+print(inv)
+
