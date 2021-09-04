@@ -44,10 +44,14 @@ def do_math():
 do_math()
 
 # Hard: 
-#     - You're at a restaurant with some friends and the server didn't split up the check.  Create a function that takes a bill amount, multiplies it by a global variable called tax_rate, adds the tax, and then divides the total bill by the number of people input by the user.  BONUS:  Include an option for adding tip through either a percentage amount assigned to a global varible, or through a specific amount input by the user.
+#     - You're at a restaurant with some friends and the server didn't split up the check.  
+#Create a function that takes a bill amount, multiplies it by a global variable called tax_rate, 
+#adds the tax, and then divides the total bill by the number of people input by the user.  
+# BONUS:  Include an option for adding tip through either a percentage amount assigned to a global varible, or through a specific amount input by the user.
+
 def split_tab():
-    total_bill = float(input("What is the total bill amount? "))
-    tip = float(input("What percentage tip would you like to leave? "))
+    total_bill = float(input("What is the total bill amount? ")) # assuming the bill comes with tax added
+    tip = float(input("What percentage tip would you like to leave? ")) 
     num_ppl = int(input("How many people are in your party? "))
     pmt_person = (total_bill * ( 1 + float(tip/100)))/num_ppl
     print("Each person must pay: ", pmt_person)
